@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nguyễn Phú Hưng · Portfolio</title>
+<meta name="description" content="Portfolio của Nguyễn Phú Hưng – sinh viên Kỹ thuật phần mềm K59, Đại học Kỹ thuật Công nghiệp Thái Nguyên. Web, AI/ML, mobile, game và hệ thống.">
+<meta property="og:title" content="Nguyễn Phú Hưng · Portfolio">
+<meta property="og:description" content="Sinh viên Kỹ thuật phần mềm K59 – TNUT. Các dự án web, AI/ML, mobile, game và hệ thống.">
+<meta property="og:image" content="assets/img/me-cung-dom-dom.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232563eb'/><text x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'>PH</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f8fb; --surface:#ffffff; --surface-2:#f0f2f7; --text:#0f172a; --muted:#5b6478;
+  --line:#e3e7ef; --accent:#2563eb; --accent-2:#7c3aed; --accent-soft:#e8efff; --ok:#047857; --ok-soft:#e3f6ee;
+  --lock:#9a6700; --lock-soft:#fdf3d8; --shadow:0 1px 2px rgba(15,23,42,.05),0 8px 24px rgba(15,23,42,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b0f17; --surface:#121826; --surface-2:#182033; --text:#e7ecf5; --muted:#97a1b5;
+    --line:#232c40; --accent:#6ea0ff; --accent-2:#a78bfa; --accent-soft:#1a2645; --ok:#4ade9b; --ok-soft:#10291f;
+    --lock:#f2c14e; --lock-soft:#2b2412; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b0f17; --surface:#121826; --surface-2:#182033; --text:#e7ecf5; --muted:#97a1b5;
+  --line:#232c40; --accent:#6ea0ff; --accent-2:#a78bfa; --accent-soft:#1a2645; --ok:#4ade9b; --ok-soft:#10291f;
+  --lock:#f2c14e; --lock-soft:#2b2412; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+@media (max-width:480px){.wrap{padding:0 16px}}
+
+/* Nav */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{font-weight:800;color:var(--text);letter-spacing:-.01em}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{color:var(--muted);font-size:.92rem;font-weight:500;padding:6px 10px;border-radius:8px}
+.nav-links a:hover{color:var(--text);background:var(--surface-2);text-decoration:none}
+.theme-btn{border:1px solid var(--line);background:var(--surface);color:var(--text);width:36px;height:36px;border-radius:10px;cursor:pointer;display:grid;place-items:center}
+@media (max-width:640px){.nav-links a.hide-sm{display:none}}
+
+/* Hero */
+.hero{padding:72px 0 48px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:6px 12px;border-radius:999px}
+.hero h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.12;letter-spacing:-.03em;margin:18px 0 14px;font-weight:800}
+.hero h1 .grad{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:1.12rem;color:var(--muted);max-width:680px;margin:0 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:12px;font-weight:600;font-size:.95rem;border:1px solid var(--line);background:var(--surface);color:var(--text)}
+.btn:hover{text-decoration:none;border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(1.08)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:44px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:1.7rem;letter-spacing:-.02em}
+.stat span{color:var(--muted);font-size:.88rem}
+@media (max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* Sections */
+section{padding:56px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.sec-head h2{margin:0;font-size:1.75rem;letter-spacing:-.02em}
+.sec-head p{margin:4px 0 0;color:var(--muted)}
+
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.skill{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+.skill h3{margin:0 0 10px;font-size:1rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.8rem;font-weight:500;padding:3px 9px;border-radius:999px;background:var(--surface-2);color:var(--muted);border:1px solid var(--line)}
+
+/* Filters */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filter{border:1px solid var(--line);background:var(--surface);color:var(--muted);padding:7px 14px;border-radius:999px;font:inherit;font-size:.88rem;font-weight:600;cursor:pointer}
+.filter[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+
+/* Projects */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+@media (max-width:380px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .15s ease,border-color .15s ease}
+.card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.thumb{aspect-ratio:16/9;background:var(--surface-2);overflow:hidden;position:relative;border-bottom:1px solid var(--line)}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.thumb.contain img{object-fit:contain;background:#fff}
+.thumb.placeholder{display:grid;place-items:center;background:linear-gradient(135deg,var(--accent-soft),color-mix(in srgb,var(--accent-2) 18%,var(--surface)))}
+.thumb.placeholder span{font-size:2.6rem}
+.card-body{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.meta{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:.78rem;color:var(--muted);font-family:"JetBrains Mono",ui-monospace,monospace}
+.card h3{margin:0;font-size:1.12rem;line-height:1.35;letter-spacing:-.01em}
+.card p{margin:0;color:var(--muted);font-size:.93rem}
+.hl{margin:0;padding:0;list-style:none;display:grid;gap:5px}
+.hl li{font-size:.86rem;padding-left:18px;position:relative}
+.hl li::before{content:"";position:absolute;left:4px;top:.62em;width:6px;height:6px;border-radius:2px;background:var(--accent)}
+.card-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:6px;flex-wrap:wrap}
+.badge{font-size:.76rem;font-weight:600;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.badge.public{background:var(--ok-soft);color:var(--ok)}
+.badge.private{background:var(--lock-soft);color:var(--lock)}
+.card-foot a{font-size:.88rem;font-weight:600}
+
+/* Contact */
+.contact{background:linear-gradient(135deg,var(--accent),var(--accent-2));border-radius:24px;padding:40px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.contact h2{margin:0 0 6px;font-size:1.7rem}
+.contact p{margin:0;opacity:.9}
+.contact .btn{background:#fff;color:#1e293b;border-color:#fff}
+@media (max-width:480px){.contact{padding:28px 22px}}
+footer{padding:32px 0 48px;color:var(--muted);font-size:.85rem;text-align:center}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#">Phú Hưng<span>.</span></a>
+    <div class="nav-links">
+      <a href="#ky-nang" class="hide-sm">Kỹ năng</a>
+      <a href="#du-an">Dự án</a>
+      <a href="#lien-he">Liên hệ</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Đổi giao diện sáng/tối" title="Đổi giao diện sáng/tối">◐</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">🎓 Sinh viên Kỹ thuật phần mềm · K59</span>
+    <h1>Xin chào, mình là<br><span class="grad">Nguyễn Phú Hưng</span></h1>
+    <p class="lead">Sinh viên ngành Kỹ thuật phần mềm tại <b>Đại học Kỹ thuật Công nghiệp Thái Nguyên</b>. Mình thích xây sản phẩm trọn vẹn: từ web, ứng dụng di động, game 3D đến các mô hình AI, luôn kèm kiểm thử tự động và tài liệu rõ ràng.</p>
+    <div class="cta">
+      <a class="btn primary" href="#du-an">Xem dự án →</a>
+      <a class="btn" href="https://github.com/phuhung2805" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="mailto:phuhung28052005@gmail.com">Email</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="statProjects">16</b><span>dự án đã hoàn thành</span></div>
+      <div class="stat"><b>480+</b><span>test tự động đã viết</span></div>
+      <div class="stat"><b>6</b><span>ngôn ngữ lập trình</span></div>
+      <div class="stat"><b>5</b><span>mảng: Web · AI · Mobile · Game · Hệ thống</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="ky-nang">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Kỹ năng</h2><p>Những công nghệ mình đã dùng thực tế trong các dự án bên dưới.</p></div></div>
+    <div class="skills">
+      <div class="skill"><h3>💻 Ngôn ngữ</h3><div class="chips"><span class="chip">Python</span><span class="chip">C#</span><span class="chip">Dart</span><span class="chip">JavaScript</span><span class="chip">C/C++</span><span class="chip">SQL / T-SQL</span></div></div>
+      <div class="skill"><h3>🌐 Web & Backend</h3><div class="chips"><span class="chip">Django</span><span class="chip">Django REST</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">Streamlit</span><span class="chip">Nginx</span><span class="chip">Node-RED</span></div></div>
+      <div class="skill"><h3>🤖 AI & Dữ liệu</h3><div class="chips"><span class="chip">PhoBERT</span><span class="chip">CNN / CRNN</span><span class="chip">LightGBM</span><span class="chip">scikit-learn</span><span class="chip">SHAP</span><span class="chip">NumPy</span><span class="chip">OpenCV</span></div></div>
+      <div class="skill"><h3>📱 Mobile & Game</h3><div class="chips"><span class="chip">Flutter</span><span class="chip">Provider</span><span class="chip">Unity 6</span><span class="chip">.NET WinForms</span><span class="chip">CustomTkinter</span></div></div>
+      <div class="skill"><h3>🗄️ CSDL & Hạ tầng</h3><div class="chips"><span class="chip">SQL Server</span><span class="chip">MariaDB</span><span class="chip">SQLite</span><span class="chip">Docker Compose</span><span class="chip">Cloudflare Tunnel</span><span class="chip">Git</span></div></div>
+      <div class="skill"><h3>✅ Chất lượng phần mềm</h3><div class="chips"><span class="chip">pytest</span><span class="chip">Playwright</span><span class="chip">Locust</span><span class="chip">Unit / Integration / E2E</span><span class="chip">HMAC · AES · RSA</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="du-an">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>Dự án</h2><p>Một số đồ án đang trong thời gian chấm nên mã nguồn để riêng tư; dự án nào có mã nguồn công khai đều có link.</p></div>
+      <div class="filters" id="filters" role="group" aria-label="Lọc dự án"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="lien-he">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>Cùng làm việc nhé?</h2>
+        <p>Mình đang tìm cơ hội thực tập và dự án thực tế về phần mềm.</p>
+      </div>
+      <div class="cta">
+        <a class="btn" href="mailto:phuhung28052005@gmail.com">✉️ phuhung28052005@gmail.com</a>
+        <a class="btn" href="https://github.com/phuhung2805" target="_blank" rel="noopener">GitHub @phuhung2805</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="year"></span> Nguyễn Phú Hưng · Trang tĩnh, lưu trữ trên GitHub Pages</footer>
+
+<script>
+const GH = 'https://github.com/phuhung2805/';
+const CATS = { web:'Web', ai:'AI & Dữ liệu', app:'Mobile & Game', sys:'Hệ thống & CSDL', sec:'Bảo mật', qa:'Kiểm thử & QLDA' };
+const projects = [
+  { title:'AnTâm Mart – Sàn TMĐT ký quỹ chống tráo hàng', course:'Công nghệ phần mềm', cat:['web','sec'], img:'antam-mart.jpg',
+    desc:'Sàn thương mại điện tử đa gian hàng: sàn giữ tiền cho đến khi người mua quét tem QR xác nhận đã nhận đúng kiện.',
+    hl:['Tem QR ký bằng HMAC-SHA256, che thông tin cá nhân trên vận đơn','Tự tách đơn theo shop, ký quỹ escrow, cổng shipper dạng PWA','Có nhật ký thao tác quan trọng'],
+    tech:['FastAPI','SQLite','PWA','HMAC'], repo:'San-thuong-mai-dien-tu' },
+  { title:'English Pro – Nền tảng học tiếng Anh CEFR', course:'Phân tích thiết kế hệ thống', cat:['web'], icon:'📚',
+    desc:'Website học tiếng Anh theo khung CEFR từ A1 đến B2, có bài kiểm tra xếp lớp và bộ dữ liệu bài học lớn.',
+    hl:['Bài kiểm tra đầu vào để xếp trình độ','Lệnh seed tự sinh dữ liệu bài học B2','Có bộ kiểm thử riêng'],
+    tech:['Django','Python','SQLite'], repo:'my-website' },
+  { title:'Ví Xanh – Ứng dụng quản lý chi tiêu', course:'TEE0419 · Mobile', cat:['app'], img:'vi-xanh.png', contain:true,
+    desc:'App Flutter ghi thu chi, đặt ngân sách theo danh mục, có biểu đồ và dự báo chi tiêu cuối tháng.',
+    hl:['Cảnh báo ngân sách ở mức 80% và 100%','3 loại biểu đồ, tìm kiếm tiếng Việt không dấu','44 test tự động, đã build APK chạy trên Android'],
+    tech:['Flutter','Provider','SQLite','fl_chart'] },
+  { title:'Mê Cung Đom Đóm – Game 3D', course:'TEE0477 · Unity', cat:['app'], img:'me-cung-dom-dom.png',
+    desc:'Game góc nhìn thứ ba: khám phá mê cung sinh ngẫu nhiên, thu thập đom đóm và né lính gác có AI.',
+    hl:['Mê cung sinh theo thủ tục (procedural)','Lõi logic C# có 31 unit test chạy không cần Unity','Script tự build bản Windows bằng dòng lệnh'],
+    tech:['Unity 6','C#'] },
+  { title:'PhoBERT vs TF-IDF – Phân tích phản hồi sinh viên', course:'TEE0591 · AI & ML', cat:['ai'], img:'phobert.png',
+    desc:'Phân loại cảm xúc và chủ đề phản hồi sinh viên tiếng Việt trên bộ UIT-VSFC, so sánh mô hình tuyến tính với PhoBERT.',
+    hl:['PhoBERT đạt macro-F1 0,823 (cảm xúc) và 0,811 (chủ đề)','Kiểm định McNemar cho thấy chênh lệch có ý nghĩa thống kê','Demo web giải thích từng từ, có API JSON'],
+    tech:['PhoBERT','Linear SVM','Flask'] },
+  { title:'Nhận dạng lệnh giọng nói tiếng Việt', course:'TEE599 · Xử lý tiếng nói', cat:['ai'], img:'kws.png', contain:true,
+    desc:'Hệ thống keyword spotting 10 lệnh cho nhà thông minh: bật đèn, mở cửa, tăng, giảm…',
+    hl:['Tự cài đặt MFCC, băng lọc Mel, VAD bằng NumPy (khớp librosa)','Mô hình DS-CNN dưới 400 nghìn tham số, suy luận 1–3 ms trên CPU','Dữ liệu tổng hợp từ 68 giọng TTS mã nguồn mở'],
+    tech:['NumPy','DS-CNN','CRNN','Piper TTS'] },
+  { title:'Dự báo bụi mịn PM2.5 tại Hà Nội', course:'TEE0478 · Khoa học dữ liệu', cat:['ai'], img:'pm25.png',
+    desc:'Phân tích 112 nghìn bản ghi theo giờ của 3 thành phố và dự báo PM2.5 ngày hôm sau.',
+    hl:['MAE 7,6 µg/m³, R² 0,76, tốt hơn baseline 39%','Giải thích mô hình bằng SHAP, khoảng dự báo conformal','Dashboard Streamlit dự báo thời gian thực'],
+    tech:['LightGBM','SHAP','Streamlit','Pandas'] },
+  { title:'Quét tài liệu & xử lý ảnh số', course:'TEE321 · Xử lý ảnh', cat:['ai'], img:'quet-tai-lieu.png',
+    desc:'Ứng dụng desktop tự tìm trang giấy, nắn phối cảnh và xuất bản scan đen trắng.',
+    hl:['22 thao tác xử lý ảnh tự cài đặt bằng NumPy','Hiển thị histogram, thời gian chạy và PSNR','Có bộ test pytest'],
+    tech:['Python','NumPy','OpenCV','CustomTkinter'] },
+  { title:'OpenLib – Quản lý thư viện mã nguồn mở', course:'TEE0421 · Mã nguồn mở', cat:['web'], img:'openlib.png',
+    desc:'Web quản lý thư viện nhỏ: mượn trả, đặt trước theo hàng đợi, nhập sách bằng ISBN. Phát hành theo giấy phép AGPL-3.0.',
+    hl:['Nhập sách tự động từ API Open Library','Hàng đợi đặt trước FIFO, tự tính tiền phạt trả muộn','REST API và phân quyền thủ thư / bạn đọc'],
+    tech:['Django','DRF','QR code'] },
+  { title:'CSDL phân tán chuỗi cửa hàng điện thoại', course:'TEE444 · CSDL phân tán', cat:['sys'], img:'csdl-phan-tan.png',
+    desc:'Hệ thống 3 site SQL Server thật (trụ sở, Hà Nội, TP.HCM) kèm web quản lý bán hàng.',
+    hl:['Phân mảnh ngang, dọc, dẫn xuất và hỗn hợp','Giao tác phân tán 2PC qua MSDTC, Linked Server','21/21 kiểm thử đạt'],
+    tech:['SQL Server','T-SQL','Flask'] },
+  { title:'Mô phỏng CPU MIPS pipeline & cache', course:'TEE0473 · Kiến trúc máy tính', cat:['sys'], img:'mips-pipeline.png', contain:true,
+    desc:'Bộ mô phỏng MIPS 5 tầng viết bằng Python thuần, có assembler, dự đoán rẽ nhánh và cache cấu hình được.',
+    hl:['Forwarding, dự đoán 2-bit + BTB, cache LRU/FIFO','180 test, gồm kiểm thử vi sai pipeline so với ISS','Giao diện web vẽ pipeline theo từng chu kỳ'],
+    tech:['Python','MIPS','Web UI'] },
+  { title:'Kiểm thử đa mức BookStore Mini', course:'TEE443 · Kiểm thử phần mềm', cat:['qa'], img:'bookstore-qa.png', contain:true,
+    desc:'Lập kế hoạch, thiết kế và thực hiện kiểm thử cho hệ thống bán sách, từ unit đến E2E và hiệu năng.',
+    hl:['163 test case: unit, tích hợp API, E2E Playwright','Độ phủ 97%, tầng nghiệp vụ phủ 100% nhánh','Locust: 50 user, p95 38 ms, 0% lỗi'],
+    tech:['pytest','Playwright','Locust'] },
+  { title:'MediBook – Quản lý dự án CNTT', course:'TEE0497 · Quản lý dự án', cat:['qa'], img:'medibook.png', contain:true,
+    desc:'Hồ sơ quản lý dự án đầy đủ cho hệ thống đặt lịch khám bệnh, sinh tự động từ một file cấu hình.',
+    hl:['WBS, PERT, CPM, Gantt, EVM, RACI, sổ rủi ro','Monte Carlo 20.000 kịch bản: khả năng kịp hạn từ 41% lên 86%','Xuất Excel có công thức và file MS Project'],
+    tech:['Python','Monte Carlo','Excel'] },
+  { title:'Quản lý lịch làm việc cá nhân', course:'Kỹ thuật lập trình nâng cao', cat:['app'], icon:'📅',
+    desc:'Ứng dụng lập lịch và quản lý công việc, kèm phân tích thuật toán và độ phức tạp.',
+    hl:['Bộ thuật toán xếp lịch cốt lõi','Đánh giá độ phức tạp lý thuyết và thực nghiệm','Báo cáo chuyên môn đầy đủ'],
+    tech:['Python'], repo:'ktltnc-' },
+  { title:'SecurityLab – AES, RSA, SHA-256 & chữ ký số', course:'An toàn bảo mật thông tin', cat:['sec'], icon:'🔐',
+    desc:'Bộ công cụ mã hoá đối xứng, bất đối xứng, băm và ký số, có cả giao diện WinForms và CLI.',
+    hl:['Sinh khoá AES 128/192/256-bit, lưu và nhập khoá từ file','Mã hoá file hàng GB bằng streaming 1 MB, không tràn bộ nhớ','Xử lý bất đồng bộ async/await'],
+    tech:['C#','.NET 8','WinForms'], repo:'SecurityLab_AES_RSA' },
+  { title:'Hạ tầng web đa container & bảo mật', course:'Lập trình web + ATBMTT', cat:['web','sec'], icon:'🐳',
+    desc:'Bài tập liên môn dựng 5 container: Nginx reverse proxy đa tên miền, Node-RED API, MariaDB, phpMyAdmin, Cloudflare Tunnel.',
+    hl:['Virtual host cho 2 tên miền, cấu hình CORS','API sinh viên qua Node-RED','Đưa web ra Internet bằng Cloudflare Tunnel'],
+    tech:['Docker Compose','Nginx','Node-RED','MariaDB'], repo:'BTVN-Web-ATBMTT' },
+];
+
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const grid = document.getElementById('grid');
+grid.innerHTML = projects.map(p => `
+  <article class="card" data-cat="${p.cat.join(' ')}">
+    <div class="thumb${p.img ? (p.contain ? ' contain' : '') : ' placeholder'}">
+      ${p.img ? `<img src="assets/img/${p.img}" alt="Ảnh minh họa ${esc(p.title)}" loading="lazy">` : `<span aria-hidden="true">${p.icon || '💡'}</span>`}
+    </div>
+    <div class="card-body">
+      <div class="meta"><span>${esc(p.course)}</span><span>${p.cat.map(c => CATS[c]).join(' · ')}</span></div>
+      <h3>${esc(p.title)}</h3>
+      <p>${esc(p.desc)}</p>
+      <ul class="hl">${p.hl.map(h => `<li>${esc(h)}</li>`).join('')}</ul>
+      <div class="chips">${p.tech.map(t => `<span class="chip">${esc(t)}</span>`).join('')}</div>
+      <div class="card-foot">
+        ${p.repo
+          ? `<span class="badge public">● Mã nguồn công khai</span><a href="${GH}${p.repo}" target="_blank" rel="noopener">Xem trên GitHub →</a>`
+          : `<span class="badge private">🔒 Riêng tư · đồ án đang chấm</span>`}
+      </div>
+    </div>
+  </article>`).join('');
+document.getElementById('statProjects').textContent = projects.length;
+
+const filters = document.getElementById('filters');
+const keys = ['all', ...Object.keys(CATS)];
+filters.innerHTML = keys.map(k => `<button class="filter" data-k="${k}" aria-pressed="${k==='all'}">${k==='all' ? 'Tất cả' : CATS[k]}</button>`).join('');
+filters.addEventListener('click', e => {
+  const b = e.target.closest('.filter'); if (!b) return;
+  filters.querySelectorAll('.filter').forEach(x => x.setAttribute('aria-pressed', x === b));
+  const k = b.dataset.k;
+  grid.querySelectorAll('.card').forEach(c => c.classList.toggle('hidden', k !== 'all' && !c.dataset.cat.split(' ').includes(k)));
+});
+
+// Theme toggle (remembered per viewer)
+const root = document.documentElement;
+try { const t = localStorage.getItem('theme'); if (t) root.dataset.theme = t; } catch (e) {}
+document.getElementById('themeBtn').addEventListener('click', () => {
+  const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.theme = dark ? 'light' : 'dark';
+  try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+});
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
